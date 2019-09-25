@@ -1,0 +1,16 @@
+name: A workflow to sync master with changes in fork repo
+on:
+  pull_request:
+    branches:
+    - master
+jobs:
+  build:
+    name: sync-master-fork 
+    runs-on: ubuntu-latest    
+    steps:
+    - uses: actions/checkout@master
+    - uses: ./cmd
+      env:
+        USER_NAME: "anubhav6663"
+        PASSWORD: "Te%4012291"
+        MY_NAME: "anubhav"

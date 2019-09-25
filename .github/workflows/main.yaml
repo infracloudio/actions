@@ -1,14 +1,16 @@
-name: A workflow for my Hello World file
+name: A workflow to sync master with changes in fork repo
 on:
   pull_request:
     branches:
     - master
 jobs:
   build:
-    name: My first action test
+    name: sync-master-fork 
     runs-on: ubuntu-latest    
     steps:
     - uses: actions/checkout@master
     - uses: ./cmd
       env:
-        MY_NAME: "Mugdha"
+        USER_NAME: "anubhav6663"
+        PASSWORD: "Te%4012291"
+        MY_NAME: "anubhav"
